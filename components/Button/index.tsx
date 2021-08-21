@@ -13,9 +13,11 @@ const Button = ({ view, arrow = "none", children, className, ...props }: IProps)
 			{...props}
 		>
 			{children}
-			{arrow !== "none" && <span className={cn(styles.arrow, {
-				[styles.down]: arrow === "down"
-			})}> <ArrowSvg /> </span> }
+			{arrow !== "none" &&
+				<ArrowSvg className={cn(styles.arrow, {
+					[styles.down]: arrow === "down"
+				})}/>
+			}
 		</button>
 	);
 };

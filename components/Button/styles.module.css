@@ -13,15 +13,11 @@
 
 .primary {
 	color: var(--light);
-	background-color: var(--primary);
+	background: var(--primary);
 }
 
 .primary:hover {
-	background-color: var(--primary-hover);
-}
-
-.primary svg {
-	fill: var(--light);
+	background: var(--primary-hover);
 }
 
 .ghost {
@@ -30,13 +26,16 @@
 	background: none;
 }
 
-.ghost:hover {
-	color: var(--light);
-	background-color: var(--primary);
-}
-
+.primary svg,
 .ghost:hover svg {
 	fill: var(--light);
+}
+
+.ghost:hover {
+	transition: background 0.2s linear;
+
+	color: var(--light);
+	background: var(--primary);
 }
 
 .arrow {
