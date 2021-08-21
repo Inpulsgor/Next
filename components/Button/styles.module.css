@@ -20,6 +20,10 @@
 	background-color: var(--primary-hover);
 }
 
+.primary svg {
+	fill: var(--light);
+}
+
 .ghost {
 	color: var(--dark);
 	border: 1px solid var(--light-gray);
@@ -29,4 +33,19 @@
 .ghost:hover {
 	color: var(--light);
 	background-color: var(--primary);
+}
+
+.ghost:hover svg {
+	fill: var(--light);
+}
+
+.arrow {
+	display: inline-block;
+
+	margin-left: 10px;
+}
+
+.down {
+	transition: transform 0.2s;
+	transform: rotate(90deg);
 }
