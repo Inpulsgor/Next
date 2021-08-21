@@ -1,2 +1,2 @@
-export * from './subcomponents/Button/Button';
-export * from './subcomponents/Title/Title';
+export * from "./Button";
+export * from "./Title";
