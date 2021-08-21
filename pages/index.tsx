@@ -1,9 +1,11 @@
-
+import { Title, Button } from '../components';
 
  const Home = (): JSX.Element => {
   return (
     <div>
-		<h1>Hello Next</h1>
+			<Title tag="h1">Hello Next</Title>
+			<Button view="primary" className="active">Click</Button>
+			<Button view="ghost">Click</Button>
     </div>
   );
 };

@@ -1,3 +1,16 @@
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
 html,
 body {
 	margin: 0;
@@ -5,22 +18,39 @@ body {
 
 	color: var(--dark);
 	background: #F5F6F8;
-
-	font-family: 'Noto Sans KR', sans-serif;
 }
 
-a {
-	text-decoration: none;
-
-	color: inherit;
+body {
+	font-family:
+		-apple-system,
+		var(--font),
+		BlinkMacSystemFont,
+		"Segoe UI",
+		"Roboto",
+		"Oxygen",
+		"Ubuntu",
+		"Cantarell",
+		"Fira Sans",
+		"Droid Sans",
+		"Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-anchor: none;
 }
 
-* {
-	box-sizing: border-box;
+code {
+	font-family:
+		source-code-pro,
+		Menlo,
+		Monaco,
+		Consolas,
+		"Courier New",
+		monospace;
 }
 
 :root {
-	--font: 'Noto Sans KR', sans-serif;
+	--font: "Noto Sans KR", sans-serif;
 	--dark: #3B434E;
 	--light: #FFF;
 	--light-gray: #EBEBEB;
@@ -29,4 +59,44 @@ a {
 	--red: #FC836D;
 	--green: #1DC37E;
 	--gree-light: #C8F8E4;
+}
+
+​img {
+	display: block;
+
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+
+	color: inherit;
+}
+
+button {
+	box-sizing: border-box;
+
+	cursor: pointer;
 }

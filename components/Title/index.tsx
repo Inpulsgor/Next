@@ -1,7 +1,7 @@
 import { IProps } from "./props";
-import styles from 'styles.module.css';
+import styles from './styles.module.css';
 
-const Title = ({ tag, children }: IProps): JSX.Element => {
+const Title = ({ tag = "h1", children }: IProps): JSX.Element => {
 	switch (tag) {
 		case 'h1':
 			return <h1 className={styles.h1}>{children}</h1>;
