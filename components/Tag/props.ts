@@ -1,7 +1,9 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
 
-export interface IProps {
-	view?: "primary" | "ghost";
+export interface IProps
+	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+	size?: "s" | "m";
+	color: "ghost" | "red" | "gray" | "green" | "primary";
+	href?: string;
 	children: ReactNode;
-	arrow?: "right" | "down" | "none";
 }
