@@ -1,4 +1,12 @@
-.filled svg {
+.star {
+	outline: none;
+}
+
+.item:not(:last-of-type) {
+	padding: 0 2px;
+}
+
+.filled {
 	fill: var(--primary);
 }
 
@@ -8,8 +16,4 @@
 
 .list {
 	display: flex;
-}
-
-.list li:not(:last-child) {
-	margin-right: 5px;
 }
