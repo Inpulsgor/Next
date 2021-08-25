@@ -4,7 +4,7 @@ import { IProps } from './props';
 import styles from './styles.module.css';
 
 const Header = ({ ...props }: IProps): JSX.Element => (
-	<header className={cn(styles.header)} {...props}>Header</header>
+	<header {...props}>Header</header>
 );
 
 export default Header;

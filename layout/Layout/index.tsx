@@ -1,30 +1,19 @@
-import React, { FunctionComponent } from 'react';
+import React from 'react';
 import { IProps } from './props';
-import { Footer, Header, Sidebar} from '..';
+import { Footer, Header, Sidebar } from '..';
+import styles from './styles.module.css';
 
 const Layout = ({ children, ...props }: IProps): JSX.Element => {
 	return (
-		<>
-			<Header />
-			<main>
-				<Sidebar />
-				<section>
-					{children}
-				</section>
+		<div className={styles.wrapper}>
+			<Header className={styles.header} />
+			<Sidebar className={styles.sidebar} />
+			<main className={styles.main}>
+				{children}
 			</main>
-			<Footer />
-		</>
+			<Footer className={styles.footer} />
+		</div>
 	);
 };
 
-const withLayout = <T extends Record<string, unknown>>(Component: FunctionComponent<T>) => {
-	return function withLayoutComponent(props: T): JSX.Element {
-		return (
-			<Layout>
-				<Component {...props} />
-			</Layout>
-		);
-	};
-};
-
-export default withLayout;
+export default Layout;
