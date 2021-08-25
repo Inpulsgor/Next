@@ -1,0 +1,15 @@
+.filled svg {
+	fill: var(--primary);
+}
+
+.editable {
+	cursor: pointer;
+}
+
+.list {
+	display: flex;
+}
+
+.list li:not(:last-child) {
+	margin-right: 5px;
+}
