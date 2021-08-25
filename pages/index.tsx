@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Title, Button, Paragraph, Tag, Rating } from '../components';
+import withLayout from '../layout/Layout';
 
  const Home = (): JSX.Element => {
 	const [rating, setRating] = useState<number>(4);
@@ -22,4 +23,4 @@ import { Title, Button, Paragraph, Tag, Rating } from '../components';
   );
 };
 
-export default Home;
+export default withLayout(Home);
