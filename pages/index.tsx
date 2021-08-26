@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Title, Button, Paragraph, Tag, Rating } from '../components';
-import withLayout from '../layout/HOC/withLayout';
+import withLayout from 'layouts/HOC/withLayout';
 
  const Home = (): JSX.Element => {
 	const [rating, setRating] = useState<number>(4);
