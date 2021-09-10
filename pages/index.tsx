@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { GetStaticProps } from 'next';
+import axios from 'axios';
 import { Title, Button, Paragraph, Tag, Rating } from '../components';
 import withLayout from 'layouts/HOC/withLayout';
 
@@ -24,3 +26,15 @@ import withLayout from 'layouts/HOC/withLayout';
 };
 
 export default withLayout(Home);
+
+export const getStaticProps: GetStaticProps = async () => {
+	const firstCategory = 0;
+	const { data: menu } = axios.post(process.env.NEXT_PUBLIC_DOMAIN + 'api/top-page/find');
+
+	return {
+		props: {
+			menu,
+			firstCategory
+		}
+	};
+};
